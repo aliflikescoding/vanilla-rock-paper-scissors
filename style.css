@@ -79,3 +79,10 @@ body {
     justify-content: space-evenly;
     gap: 20px;
 }
+
+/* Win Message Area */
+.message-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
