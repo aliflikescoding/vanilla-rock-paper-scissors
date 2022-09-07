@@ -66,4 +66,16 @@ body {
 }
 
 /* Score Area */
+.score-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
 
+.score-board {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
