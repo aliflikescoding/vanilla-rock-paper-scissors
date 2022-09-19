@@ -15,9 +15,8 @@ let playerScore = 0;
 let computerScore = 0;
 let rounds = 0;
 
-// player choice
+// game choice
 let playerChoice;
-// computer choice
 let computerChoice;
 
 // get computer choice function
@@ -25,3 +24,7 @@ function getComputerChoice() {
     let num = Math.floor(Math.random() * 3) + 1;
     return num;
 }
+
+// change player score text and computer score text
+playerScText.textContent = `Player Score: ${playerScore}`;
+computerScText.textContent = `Computer Score: ${computerScore}`;
