@@ -10,8 +10,10 @@ let playerScText = document.querySelector('#player-score');
 let computerScText = document.querySelector('#computer-score');
 let luckText = document.querySelector('#luck-message');
 
-// game score
-let score = 0;
+// count variables
+let playerScore = 0;
+let computerScore = 0;
+let rounds = 0;
 
 // player choice
 let playerChoice;
