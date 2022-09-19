@@ -52,41 +52,52 @@ function action(selected) {
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        wins++;
     }
     else if (playerChoice === 1 && computerChoice === 2) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        wins++;
+
     }
     else if (playerChoice === 2 && computerChoice === 1) {
         playerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        wins++;
     }
     else if (playerChoice === 2 && computerChoice === 3) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        wins++;
     }
     else if (playerChoice === 3 && computerChoice === 2) {
         playerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        wins++;
     }
     else if (playerChoice === 3 && computerChoice === 1) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        wins++;
+    }
+
+    if (playerScore === 2 || computerScore === 2) {
+        if (playerScore === 2) {
+            winText.textContent = `Congrats you won!!!`;
+            luckText.textContent = `Congrats luck was on your side!!!`;
+        }
+        if (computerScore === 2) {
+            winText.textContent = `Computer won!!!`;
+            luckText.textContent = `Aww man unlucky better luck next time!!!`;
+        }
+
+        playerScText.textContent = `Player Score: ${playerScore}`;
+        computerScText.textContent = `Computer Score: ${computerScore}`;
+        playerScore = 0;
+        computerScore = 0;
     }
 }
