@@ -28,3 +28,19 @@ function getComputerChoice() {
 // change player score text and computer score text
 playerScText.textContent = `Player Score: ${playerScore}`;
 computerScText.textContent = `Computer Score: ${computerScore}`;
+
+// click events
+elephant.addEventListener('click', () => {
+    action(1);
+});
+ant.addEventListener('click', () => {
+    action(2);
+});
+human.addEventListener('click', () => {
+    action(3);
+});
+
+// event function
+function action(selected) {
+    
+}
