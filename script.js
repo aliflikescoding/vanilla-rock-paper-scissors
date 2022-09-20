@@ -10,6 +10,7 @@ let playerScText = document.querySelector('#player-score');
 let computerScText = document.querySelector('#computer-score');
 let luckText = document.querySelector('#luck-message');
 let luckArea = document.querySelector('.luck-area');
+let messageArea = document.querySelector('.message-area');
 
 // count variables
 let playerScore = 0;
@@ -114,6 +115,16 @@ function action(selected) {
             text.innerHTML = 'Aww man unlucky better luck next time!!!';
             luckArea.appendChild(text);
         }
+
+        const restartButton = document.createElement('button');
+        restartButton.textContent = 'CLICK HERE TO RESTART THE GAME';
+
+        restartButton.addEventListener('click', () => {
+            window.location.reload();
+        });
+
+        messageArea.appendChild(restartButton);
+        
 
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
