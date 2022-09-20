@@ -5,8 +5,9 @@
 }
 
 :root {
+    --red: #e82e00;
     --orange: #e8a000;
-    --yellow: #ffd12a;
+    --yellow: #ffc800;
     --chocolate: #8e5d09;
     --blue: #719585;
 }

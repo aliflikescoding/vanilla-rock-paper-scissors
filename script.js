@@ -115,14 +115,14 @@ function action(selected) {
             text.innerHTML = 'Aww man unlucky better luck next time!!!';
             luckArea.appendChild(text);
         }
+        winText.style.color = 'var(--red)';
+        winText.style.fontSize = '250%';
 
         const restartButton = document.createElement('button');
         restartButton.textContent = 'CLICK HERE TO RESTART THE GAME';
-
         restartButton.addEventListener('click', () => {
             window.location.reload();
         });
-
         messageArea.appendChild(restartButton);
         
 
