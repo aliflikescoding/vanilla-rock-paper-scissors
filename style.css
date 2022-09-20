@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     background-image: url('https://img.freepik.com/free-vector/detailed-jungle-background_52683-62631.jpg?w=2000');
     background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Header */
