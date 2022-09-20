@@ -9,6 +9,7 @@ let winText = document.querySelector('#win-message');
 let playerScText = document.querySelector('#player-score');
 let computerScText = document.querySelector('#computer-score');
 let luckText = document.querySelector('#luck-message');
+let luckArea = document.querySelector('.luck-area');
 
 // count variables
 let playerScore = 0;
@@ -105,13 +106,13 @@ function action(selected) {
             winText.textContent = `Congrats You Won!!!`;
             const text = document.createElement('p');
             text.innerHTML = 'Congrats luck was on your side!!!';
-            luckText.appendChild(text);
+            luckArea.appendChild(text);
         }
         if (computerScore === 2) {
             winText.textContent = `Computer Won!!!`;
             const text = document.createElement('p');
             text.innerHTML = 'Aww man unlucky better luck next time!!!';
-            luckText.appendChild(text);
+            luckArea.appendChild(text);
         }
 
         playerScText.textContent = `Player Score: ${playerScore}`;

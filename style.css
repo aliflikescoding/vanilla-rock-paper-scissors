@@ -86,3 +86,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.luck-area {
+    display: flex;
+    flex-direction: column;
+}
