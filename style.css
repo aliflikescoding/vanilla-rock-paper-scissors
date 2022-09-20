@@ -4,13 +4,19 @@
     padding: 0;
 }
 
+:root {
+    --orange: #e8a000;
+    --yellow: #ffd12a;
+    --chocolate: #8e5d09;
+    --blue: #719585;
+}
+
 body {
     display: flex;
     flex-direction: column;
     background-image: url('https://img.freepik.com/free-vector/detailed-jungle-background_52683-62631.jpg?w=2000');
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
-    color: #ffd500;
 }
 
 /* Header */
@@ -20,6 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 45px auto;
+    color: var(--yellow);
 }
 
 /*Hero*/
@@ -30,6 +37,7 @@ body {
     justify-content: center;
     text-align: center;
     margin-bottom: 45px;
+    color: var(--yellow);
 }
 
 .hero-content {
@@ -76,6 +84,7 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 25px;
+    color: var(--orange);
 }
 
 .score-board {
@@ -91,6 +100,7 @@ body {
     gap: 8px;
     justify-content: center;
     align-items: center;
+    color: var(--orange);
 }
 
 .luck-area {
@@ -98,4 +108,5 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: var(--orange);
 }
