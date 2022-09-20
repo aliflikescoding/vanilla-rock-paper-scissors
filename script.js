@@ -46,52 +46,67 @@ function action(selected) {
     computerChoice = getComputerChoice();
     if (playerChoice == computerChoice) {
         winText.textContent = `It's a draw, select again`;
+        if (playerChoice === 1) {
+            luckText.innerHTML = `Player Choose Elephant | Computer Choose Elephant`;
+        }
+        else if (playerChoice === 2) {
+            luckText.innerHTML = `Player Choose Ant | Computer Choose Ant`;
+        }
+        else if (playerChoice === 3) {
+            luckText.innerHTML = `Player Choose Human | Computer Choose Human`;
+        }
     }
     else if (playerChoice === 1 && computerChoice === 3) {
         playerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
+        luckText.innerHTML = `Player Choose Elephant | Computer Choose Human`;
     }
     else if (playerChoice === 1 && computerChoice === 2) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-
+        luckText.innerHTML = `Player Choose Elephant | Computer Choose Ant`;
     }
     else if (playerChoice === 2 && computerChoice === 1) {
         playerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
+        luckText.innerHTML = `Player Choose Ant | Computer Choose Elephant`;
     }
     else if (playerChoice === 2 && computerChoice === 3) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
+        luckText.innerHTML = `Player Choose Ant | Computer Choose Human`;
     }
     else if (playerChoice === 3 && computerChoice === 2) {
         playerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
+        luckText.innerHTML = ``;
+        luckText.innerHTML = `Player Choose Human | Computer Choose Ant`;
     }
     else if (playerChoice === 3 && computerChoice === 1) {
         computerScore++;
         playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
+        luckText.innerHTML = `Player Choose Elephant | Computer Choose Ant`;
     }
 
     if (playerScore === 2 || computerScore === 2) {
         if (playerScore === 2) {
-            winText.textContent = `Congrats you won!!!`;
+            winText.textContent = `Congrats You Won!!!`;
             luckText.textContent = `Congrats luck was on your side!!!`;
         }
         if (computerScore === 2) {
-            winText.textContent = `Computer won!!!`;
+            winText.textContent = `Computer Won!!!`;
             luckText.textContent = `Aww man unlucky better luck next time!!!`;
         }
 
