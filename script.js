@@ -103,11 +103,15 @@ function action(selected) {
     if (playerScore === 2 || computerScore === 2) {
         if (playerScore === 2) {
             winText.textContent = `Congrats You Won!!!`;
-            luckText.textContent = `Congrats luck was on your side!!!`;
+            const text = document.createElement('p');
+            text.innerHTML = 'Congrats luck was on your side!!!';
+            luckText.appendChild(text);
         }
         if (computerScore === 2) {
             winText.textContent = `Computer Won!!!`;
-            luckText.textContent = `Aww man unlucky better luck next time!!!`;
+            const text = document.createElement('p');
+            text.innerHTML = 'Aww man unlucky better luck next time!!!';
+            luckText.appendChild(text);
         }
 
         playerScText.textContent = `Player Score: ${playerScore}`;
