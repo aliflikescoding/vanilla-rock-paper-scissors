@@ -30,6 +30,10 @@ body {
     align-items: center;
     justify-content: center;
     margin: 45px auto;
+    background-image: url(./images/woodboard.png);
+    width: 125px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*Hero*/
@@ -60,6 +64,11 @@ body {
     align-items: center;
     justify-content: center;
     margin: 45px auto;
+    background-image: url(./images/woodboard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 800px;
 }
 
 .game-content {
