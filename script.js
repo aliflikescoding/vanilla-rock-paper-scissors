@@ -108,12 +108,14 @@ function action(selected) {
             const text = document.createElement('p');
             text.innerHTML = 'Congrats luck was on your side!!!';
             luckArea.appendChild(text);
+            text.style.color = 'var(--red)';
         }
         if (computerScore === 2) {
             winText.textContent = `Computer Won!!!`;
             const text = document.createElement('p');
             text.innerHTML = 'Aww man unlucky better luck next time!!!';
             luckArea.appendChild(text);
+            text.style.color = 'var(--red)';
         }
         winText.style.color = 'var(--red)';
         winText.style.fontSize = '250%';
