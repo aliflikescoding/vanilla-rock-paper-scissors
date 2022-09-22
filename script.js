@@ -33,17 +33,17 @@ computerScText.textContent = `Computer Score: ${computerScore}`;
 
 // click events
 elephant.addEventListener('click', () => {
-    action(1);
+    playRound(1);
 });
 ant.addEventListener('click', () => {
-    action(2);
+    playRound(2);
 });
 human.addEventListener('click', () => {
-    action(3);
+    playRound(3);
 });
 
 // event function
-function action(selected) {
+function playRound(selected) {
     playerChoice = selected;
     computerChoice = getComputerChoice();
     if (playerChoice == computerChoice) {
@@ -102,15 +102,15 @@ function action(selected) {
         luckText.innerHTML = `Player Choose Elephant | Computer Choose Ant`;
     }
 
-    if (playerScore === 2 || computerScore === 2) {
-        if (playerScore === 2) {
+    if (playerScore === 5 || computerScore ===5) {
+        if (playerScore === 5) {
             winText.textContent = `Congrats You Won!!!`;
             const text = document.createElement('p');
             text.innerHTML = 'Congrats luck was on your side!!!';
             luckArea.appendChild(text);
             text.style.color = 'var(--red)';
         }
-        if (computerScore === 2) {
+        if (computerScore === 5) {
             winText.textContent = `Computer Won!!!`;
             const text = document.createElement('p');
             text.innerHTML = 'Aww man unlucky better luck next time!!!';
