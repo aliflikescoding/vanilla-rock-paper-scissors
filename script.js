@@ -132,5 +132,9 @@ function action(selected) {
         computerScText.textContent = `Computer Score: ${computerScore}`;
         playerScore = 0;
         computerScore = 0;
+
+        elephant.style.pointerEvents = 'none';
+        ant.style.pointerEvents = 'none';
+        human.style.pointerEvents = 'none';
     }
 }
