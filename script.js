@@ -49,71 +49,61 @@ function playRound(selected) {
     if (playerChoice == computerChoice) {
         winText.textContent = `It's a draw, select again`;
         if (playerChoice === 1) {
-            luckText.innerHTML = `Player Choose Elephant | Computer Choose Elephant`;
+            luckText.textContent = `Player Choose Elephant | Computer Choose Elephant`;
         }
         else if (playerChoice === 2) {
-            luckText.innerHTML = `Player Choose Ant | Computer Choose Ant`;
+            luckText.textContent = `Player Choose Ant | Computer Choose Ant`;
         }
         else if (playerChoice === 3) {
-            luckText.innerHTML = `Player Choose Human | Computer Choose Human`;
+            luckText.textContent = `Player Choose Human | Computer Choose Human`;
         }
     }
     else if (playerChoice === 1 && computerChoice === 3) {
         playerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
-        computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        luckText.innerHTML = `Player Choose Elephant | Computer Choose Human`;
+        luckText.textContent = `Player Choose Elephant | Computer Choose Human`;
     }
     else if (playerChoice === 1 && computerChoice === 2) {
         computerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
-        computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        luckText.innerHTML = `Player Choose Elephant | Computer Choose Ant`;
+        luckText.textContent = `Player Choose Elephant | Computer Choose Ant`;
     }
     else if (playerChoice === 2 && computerChoice === 1) {
         playerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
-        computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        luckText.innerHTML = `Player Choose Ant | Computer Choose Elephant`;
+        luckText.textContent = `Player Choose Ant | Computer Choose Elephant`;
     }
     else if (playerChoice === 2 && computerChoice === 3) {
         computerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
-        computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        luckText.innerHTML = `Player Choose Ant | Computer Choose Human`;
+        luckText.textContent = `Player Choose Ant | Computer Choose Human`;
     }
     else if (playerChoice === 3 && computerChoice === 2) {
         playerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
         computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Player wins this round!!!`;
-        luckText.innerHTML = ``;
-        luckText.innerHTML = `Player Choose Human | Computer Choose Ant`;
+        luckText.textContent = `Player Choose Human | Computer Choose Ant`;
     }
     else if (playerChoice === 3 && computerChoice === 1) {
         computerScore++;
-        playerScText.textContent = `Player Score: ${playerScore}`;
-        computerScText.textContent = `Computer Score: ${computerScore}`;
         winText.textContent = `Computer wins this round!!!`;
-        luckText.innerHTML = `Player Choose Elephant | Computer Choose Ant`;
+        luckText.textContent = `Player Choose Elephant | Computer Choose Ant`;
     }
+    playerScText.textContent = `Player Score: ${playerScore}`;
+    computerScText.textContent = `Computer Score: ${computerScore}`;
 
     if (playerScore === 5 || computerScore ===5) {
         if (playerScore === 5) {
             winText.textContent = `Congrats You Won!!!`;
             const text = document.createElement('p');
-            text.innerHTML = 'Congrats luck was on your side!!!';
+            text.textContent = 'Congrats luck was on your side!!!';
             luckArea.appendChild(text);
             text.style.color = 'var(--red)';
         }
         if (computerScore === 5) {
             winText.textContent = `Computer Won!!!`;
             const text = document.createElement('p');
-            text.innerHTML = 'Aww man unlucky better luck next time!!!';
+            text.textContent = 'Aww man unlucky better luck next time!!!';
             luckArea.appendChild(text);
             text.style.color = 'var(--red)';
         }
